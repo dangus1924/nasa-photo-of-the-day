@@ -7,9 +7,9 @@ import "./App.css";
 
 function App() {
   axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-  .then{res => {
-    console.log(res)
-  }}
+  .then(res => {
+    console.log(res.data)
+  })
   return (
     <div className="App">
       <Heading />
