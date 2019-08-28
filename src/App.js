@@ -8,9 +8,8 @@ import "./App.css";
 function App() {
   const [data, setData] = useState({ });
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-  .then(res => {
-    console.log(res.data)
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=XFojgFKtU54kVP2yJzjDbEurB5g6cWBGde4WiPHA")    
+  .then(res => {  
     setData(res.data)    
   });
   }, [])
