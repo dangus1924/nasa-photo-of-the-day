@@ -2,8 +2,7 @@ import React from 'react';
 import axios from "axios";
 
 
-function NasaCard(props) {
-    
+function NasaCard(props) {   
    
 return(
     <div>
