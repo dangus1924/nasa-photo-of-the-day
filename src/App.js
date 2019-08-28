@@ -6,9 +6,12 @@ import NasaCard from "./Component/NASA-api"
 import "./App.css";
 
 function App() {
+  const [data, setData] = useState({ });
+  
   axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
   .then(res => {
     console.log(res.data)
+    setData(res.data)    
   })
   return (
     <div className="App">
@@ -16,9 +19,9 @@ function App() {
       <p>Here you will find the latest  images that NASA has to offer</p>
       <Button />
       <div>
-      <NasaCard title="props title" 
-              url="this is not a url"
-              explanation="this will be some explanation"/>
+      <NasaCard title={data.title} 
+              url={data.url}
+              explanation={data.explanation}/>
       </div>
     </div>
   );
