@@ -1,7 +1,8 @@
 import React from 'react';
+import { Button } from 'reactstrap'
 
-function Button() {
-    return <button>Click me to explore</button>
+function Click(props) {
+    return <Button color="danger">Click me to explore</Button>
 }
 
-export default Button
+export default Click
