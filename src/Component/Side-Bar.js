@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import {
   Carousel,
   CarouselItem,
@@ -10,20 +11,25 @@ import {
 const items = [
   {
     src: 'https://apod.nasa.gov/apod/image/1203/GraySun2panelLabel800.jpg',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    altText: '1',
+    caption:'1'
   },
   {
     src: 'https://api.nasa.gov/images/apod.jpg',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    altText: '2',
+    caption:'2'
   },
   {
     src: 'https://api.nasa.gov/images/insight_photo.png',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    altText:'3',
+    caption: '3'
   }
 ];
+
+const Box = styled.img`
+  width: 100%;
+  height 700px;
+`;
 
 class Slide extends Component {
   constructor(props) {
@@ -71,7 +77,7 @@ class Slide extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
+          <Box  src={item.src} alt={item.altText} />
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );

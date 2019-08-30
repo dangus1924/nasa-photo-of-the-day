@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
-  } from 'reactstrap';
+
 
   const Top = styled.nav`
   font-size: 3em;
