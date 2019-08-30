@@ -1,14 +1,32 @@
 import React from 'react';
-import axios from "axios";
+import { Jumbotron } from 'reactstrap';
+import styled from 'styled-components'
 
+const Title = styled.h2`
+  font-size: 5em;
+  text-align: center;
+  color: #0099CC;
+  font-weight: Bold;
+`;
+
+const Paragraph = styled.p`
+  font-size: 1.5em;
+  padding: 20px; 
+  text-align: center;
+  color: #0099CC;
+  border: 1px dashed;
+  font-height:15.px;   
+`;
 
 function NasaCard(props) {   
-   
+
 return(
     <div>
-        <h2>{props.title}</h2>
-        <img src={props.url} />
-        <p>{props.explanation}</p>
+        <Jumbotron>
+            <Title>{props.title}</Title>
+            <img src={props.url} />
+            <Paragraph>{props.explanation}</Paragraph>
+        </Jumbotron>
     </div>
 )
 }

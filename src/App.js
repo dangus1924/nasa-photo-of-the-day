@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Alert } from 'reactstrap';
 import axios from "axios"
 import Heading from './Component/Heading';
 import Click from './Component/Button';
-import NasaCard from "./Component/NASA-api"
-import SideBar from "./Component/Side-Bar"
+import NasaCard from "./Component/NASA-api";
+import Slide from "./Component/Side-Bar";
+
 
 import "./App.css";
 
@@ -29,7 +31,8 @@ function App() {
   return (
     <div className="App">
       <Heading />
-      <p>Here you will find the latest  images that NASA has to offer</p>
+      <Slide />
+      <Alert color="primary">Here you will find the latest  images that NASA has to offer</Alert>
       <Click />
       <div>
       <NasaCard title={data.title} 
